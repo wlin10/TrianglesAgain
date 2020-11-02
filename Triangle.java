@@ -29,19 +29,17 @@ public class Triangle{
   }
 
   public String classify() {
-    double sideA = (Math.round(v1.distanceTo(v2) * 10000)/10000);
-    double sideB = (Math.round(v2.distanceTo(v3) * 10000)/10000);
-    double sideC = (Math.round(v3.distanceTo(v1) * 10000)/10000);
-    if (sideA == sideB) {
-      if (sideA == sideC) {
-        return ("Equilateral");
-      } else {
-        return ("Isoceles");
-      }
-    } else if (sideA == sideC) {
-      return ("Isoceles");
+    double sideA = (Math.round(v1.distanceTo(v2) * 10000)/10000.0);
+    double sideB = (Math.round(v2.distanceTo(v3) * 10000)/10000.0);
+    double sideC = (Math.round(v3.distanceTo(v1) * 10000)/10000.0);
+    if (sideA == sideB && sideA == sideC) {
+      return ("Equilateral");
+    } else if (sideA == sideB) {
+      return ("Isosceles");
     } else if (sideB == sideC) {
-      return ("Isoceles");
+      return ("Isosceles");
+    } else if (sideA == sideC) {
+      return ("Isosceles");
     } else {
       return ("Scalene");
     }
