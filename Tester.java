@@ -23,5 +23,14 @@ public class Tester{
 		System.out.println(triangleA.getArea());
 		System.out.println(triangleB.getArea());
 
+		System.out.println(triangleA.classify());
+		System.out.println(triangleB.classify());
+
+		System.out.println(triangleA.toString());
+		System.out.println(triangleB.toString());
+
+		triangleA.setVertex(0, pointC);
+		System.out.println(triangleA);
+
 	}
 }
