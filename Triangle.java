@@ -19,5 +19,12 @@ public class Triangle{
     double sideC = v3.distanceTo(v1);
     return (sideA + sideB + sideC);
   }
+  public double getArea() {
+    double sideA = v1.distanceTo(v2);
+    double sideB = v2.distanceTo(v3);
+    double sideC = v3.distanceTo(v1);
+    double semi = ((sideA+sideB+sideC)/2);
+    return (Math.sqrt((semi)*(semi-sideA)*(semi-sideB)*(semi-sideC)));
+  }
 
 }
